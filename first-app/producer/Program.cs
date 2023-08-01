@@ -12,6 +12,9 @@ using IModel channel = connection.CreateModel();
 
 channel.QueueDeclare(queue:"letterbox",durable:false,exclusive:false,autoDelete:false,arguments:null);
 
+IBasicProperties properties = channel.CreateBasicProperties();
+properties.Persistent = false;
+
 ConsoleKey? key = null;
 
 do
@@ -21,7 +24,7 @@ do
     var encodedMessage = Encoding.UTF8.GetBytes(message);
 
     //we always have to publish to an exchange
-    channel.BasicPublish(exchange: "", routingKey: "letterbox", null, encodedMessage);
+    channel.BasicPublish(exchange: "", routingKey: "letterbox", basicProperties:properties, encodedMessage);
 
     Console.WriteLine($"Published message : {message}");
 

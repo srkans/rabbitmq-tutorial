@@ -14,6 +14,8 @@ channel.QueueDeclare(queue:"letterbox",durable:false,exclusive:false,autoDelete:
 
 EventingBasicConsumer consumer = new EventingBasicConsumer(channel);
 
+channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+
 channel.BasicConsume(queue: "letterbox", autoAck: false, consumer: consumer);
 
 //kuyruga gelen mesaji proses ediyoruz
