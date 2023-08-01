@@ -14,14 +14,17 @@ channel.QueueDeclare(queue:"letterbox",durable:false,exclusive:false,autoDelete:
 
 EventingBasicConsumer consumer = new EventingBasicConsumer(channel);
 
+channel.BasicConsume(queue: "letterbox", autoAck: false, consumer: consumer);
+
 //kuyruga gelen mesaji proses ediyoruz
 consumer.Received += (model, ea) =>
 {
     var body = ea.Body.ToArray();
     var message = Encoding.UTF8.GetString(body);
     Console.WriteLine($"message received : {message}");
+
+    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
 };
 
-channel.BasicConsume(queue:"letterbox", autoAck:true, consumer: consumer);
 
 Console.ReadKey();
