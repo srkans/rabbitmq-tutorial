@@ -2,19 +2,31 @@
 using System.Text;
 using RabbitMQ.Client;
 
-var factory = new ConnectionFactory{HostName="localhost"};
+ConnectionFactory factory = new ConnectionFactory{HostName="localhost"};
 
-using var connection = factory.CreateConnection();
+//IDisposeble arayuzunu implement ettikleri icin using ile kullandik.
+using IConnection connection = factory.CreateConnection();
 
-using var channel = connection.CreateModel();
+//islem bittikten sonra nesneyi dispose edip allocation'lari temizlemis oluyoruz.
+using IModel channel = connection.CreateModel();
 
 channel.QueueDeclare(queue:"letterbox",durable:false,exclusive:false,autoDelete:false,arguments:null);
 
-var message = "This is my first message";
+ConsoleKey? key = null;
 
-var encodedMessage = Encoding.UTF8.GetBytes(message);
+do
+{
+    var message = Console.ReadLine();
 
-//we always have to publish to an exchange
-channel.BasicPublish("","letterbox", null, encodedMessage);
+    var encodedMessage = Encoding.UTF8.GetBytes(message);
 
-Console.WriteLine($"Published message : {message}");
+    //we always have to publish to an exchange
+    channel.BasicPublish(exchange: "", routingKey: "letterbox", null, encodedMessage);
+
+    Console.WriteLine($"Published message : {message}");
+
+    key = Console.ReadKey().Key;
+
+} while (key != ConsoleKey.Enter);
+
+
