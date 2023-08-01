@@ -13,3 +13,13 @@ channel.QueueDeclare(queue:"letterbox",durable:false,exclusive:false,autoDelete:
 
 var consumer = new EventingBasicConsumer(channel);
 
+consumer.Received += (model,ea) =>
+{
+    var body = ea.Body.ToArray();
+    var message = Encoding.UTF8.GetString(body);
+    Console.WriteLine($"message received : {message}");
+};
+
+channel.BasicConsume(queue:"letterbox", autoAck:true, consumer: consumer);
+
+Console.ReadKey();
