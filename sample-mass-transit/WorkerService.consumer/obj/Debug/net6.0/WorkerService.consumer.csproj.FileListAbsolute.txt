@@ -1,0 +1,5 @@
+F:\rabbitmq-tutorial\sample-mass-transit\WorkerService.consumer\obj\Debug\net6.0\WorkerService.consumer.csproj.AssemblyReference.cache
+F:\rabbitmq-tutorial\sample-mass-transit\WorkerService.consumer\obj\Debug\net6.0\WorkerService.consumer.GeneratedMSBuildEditorConfig.editorconfig
+F:\rabbitmq-tutorial\sample-mass-transit\WorkerService.consumer\obj\Debug\net6.0\WorkerService.consumer.AssemblyInfoInputs.cache
+F:\rabbitmq-tutorial\sample-mass-transit\WorkerService.consumer\obj\Debug\net6.0\WorkerService.consumer.AssemblyInfo.cs
+F:\rabbitmq-tutorial\sample-mass-transit\WorkerService.consumer\obj\Debug\net6.0\WorkerService.consumer.csproj.CoreCompileInputs.cache
