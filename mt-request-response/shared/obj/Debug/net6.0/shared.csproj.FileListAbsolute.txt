@@ -1,0 +1,12 @@
+F:\rabbitmq-tutorial\sample-mass-transit\shared\bin\Debug\net6.0\shared.deps.json
+F:\rabbitmq-tutorial\sample-mass-transit\shared\bin\Debug\net6.0\shared.dll
+F:\rabbitmq-tutorial\sample-mass-transit\shared\bin\Debug\net6.0\shared.pdb
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.csproj.AssemblyReference.cache
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.AssemblyInfoInputs.cache
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.AssemblyInfo.cs
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.csproj.CoreCompileInputs.cache
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.dll
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\refint\shared.dll
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\shared.pdb
+F:\rabbitmq-tutorial\sample-mass-transit\shared\obj\Debug\net6.0\ref\shared.dll
