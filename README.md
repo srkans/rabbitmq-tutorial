@@ -1,2 +1,2 @@
 # rabbitmq-tutorial
-RabbitMQ Tutorial
+RabbitMQ 
